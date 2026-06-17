@@ -31,7 +31,7 @@ export async function main(ns) {
     const SECURITY_THRESHOLD = 5;   // weaken when level > min + this
     const MONEY_THRESHOLD    = 0.75; // grow when money < max * this
 
-    ns.tail(); // open a log window so progress is visible
+    ns.ui.openTail(); // open a log window so progress is visible
 
     while (true) {
         const secLevel    = ns.getServerSecurityLevel(TARGET);
